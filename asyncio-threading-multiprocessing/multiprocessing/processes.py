@@ -18,11 +18,11 @@ for i in range(os.cpu_count()):
 
 start_time = time.time()
 
-for thread in processes:
-    thread.start()
+for process in processes:
+    process.start()
 
-for thread in processes:
-    thread.join()
+for process in processes:
+    process.join()
 
 end_time = time.time()
 print(end_time - start_time)
