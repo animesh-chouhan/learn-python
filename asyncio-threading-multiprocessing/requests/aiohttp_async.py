@@ -6,7 +6,7 @@ import aiohttp
 N = 100
 URL = "http://httpbin.org/uuid"
 
-# NOTE: This won't work because requests doesn't support await and is blocking
+# NOTE: This won't work because requests doesn't support await and is blocking i.e requests.get() isn't awaitable
 # https://stackoverflow.com/questions/33357233/when-to-use-and-when-not-to-use-python-3-5-await/33399896#33399896
 # async def get_uuid(s, i):
 #     response = await s.get(URL)
@@ -26,7 +26,7 @@ async def get_uuid(s, i):
     # Read why "async with": https://stackoverflow.com/questions/55234194/why-do-i-have-to-use-async-with-when-using-the-aiohttp-module
     async with s.get(URL) as response:
         data = await response.json()
-        print(str(i) + ": " +  data["uuid"])
+        print(str(i) + ": " + response.json()["uuid"] + "\n", end="")
 
 
 async def main():

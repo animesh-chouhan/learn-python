@@ -6,7 +6,7 @@ URL = "http://httpbin.org/uuid"
 
 def get_uuid(s, i):
     response = s.get(URL)
-    # print(str(i) + ": " + response.json()["uuid"])
+    print(str(i) + ": " + response.json()["uuid"] + "\n", end="")
 
 def main():
     with requests.Session() as s:

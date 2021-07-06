@@ -1,0 +1,6 @@
+N = 100
+
+request_sync.py=34.83609914779663
+aiohttp_async.py=7.96947455406189
+request_multiproc.py=12.81851053237915
+request_thread=4.869281053543091
