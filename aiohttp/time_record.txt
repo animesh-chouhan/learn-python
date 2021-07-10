@@ -1,0 +1,3 @@
+multiple_sync=13.879
+multiple_request=20.609
+aiohttp_async_tasks.py=7.671
