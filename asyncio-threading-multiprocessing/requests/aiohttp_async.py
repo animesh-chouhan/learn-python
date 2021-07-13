@@ -22,6 +22,8 @@ URL = "http://httpbin.org/uuid"
 
 # https://www.youtube.com/watch?v=bs9tlDFWWdQ
 # Read this: https://docs.aiohttp.org/en/stable/http_request_lifecycle.html#aiohttp-request-lifecycle
+
+
 async def get_uuid(s, i):
     # Read why "async with": https://stackoverflow.com/questions/55234194/why-do-i-have-to-use-async-with-when-using-the-aiohttp-module
     async with s.get(URL) as response:
@@ -41,4 +43,4 @@ if __name__ == "__main__":
     start_time = time.time()
     asyncio.run(main())
     end_time = time.time()
-    print("Finished in " + str(end_time - start_time))
+    print("Finished in ", end_time - start_time)
