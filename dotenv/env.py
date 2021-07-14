@@ -11,3 +11,9 @@ print(SECRET_KEY)
 # OR
 
 config = dotenv_values(".env")
+print(config)
+
+# OR
+
+secret_key = os.getenv("SECRET_KEY")
+print(secret_key)
