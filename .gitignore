@@ -2,3 +2,6 @@ venv/*
 .vscode/*
 dotenv/.env
 twilio/.env
+cloudinary/.env
+*/.env
+cloudinary/pictures/*
