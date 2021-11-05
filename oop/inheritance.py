@@ -1,3 +1,4 @@
+# Parent Class
 class Item:
     all = []
 
@@ -16,15 +17,20 @@ class Item:
     def __repr__(self):
         return f"Item({self.name}, {self.price}, {self.quantity}))"
 
+# Child Class
+class Phone(Item):
+    all = []
 
-item1 = Item("Phone", 100, 1)
-item2 = Item("Laptop", 1000, 3)
-item3 = Item("Cable", 10, 5)
-item4 = Item("Mouse", 50, 5)
-item5 = Item("Keyboard", 75, 5)
+    def __init__(self, name: str, price: float, quantity: int, broken_phones: int):
+        # Call to super function
+        super().__init__(name, price, quantity)
+        
+        assert quantity >= 0
+
+        self.broken_phones = broken_phones
 
 
-print(Item.all)
+phone1 = Phone("Pixel", 500, 5, 1)
+print(phone1.broken_phones)
 
-for instance in Item.all:
-    print(instance.name)
+phone2 = Phone("Samsung", 700, 5, 1)
